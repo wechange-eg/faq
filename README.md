@@ -41,7 +41,7 @@ Michael (CEO), Sascha and Simon (Technology)
 # General / Onboarding
 <a id="developers"></a>
 ## Who develops WECHANGE/cosinnus?
-In addition to 2 concepters, WECHANGE currently employs 2 developers who fix upcoming bugs and develop features in this framework. Currently, the project is being developed in the context of customer inquiries, funding projects (mainly from the Foreign Office), feature requests and white label portals. Using open source code and modules complies with our claim to transparency and disclosure. Our mission is to create maximum synergy, visibility, connectivity and collaboration. 
+In addition to 2 concepters, WECHANGE currently employs 1.5 developers who fix upcoming bugs and develop features in this framework. Currently, the project is being developed in the context of customer inquiries, funding projects (mainly from the Foreign Office), feature requests and white label portals. Using open source code and modules complies with our claim to transparency and disclosure. Our mission is to create maximum synergy, visibility, connectivity and collaboration. 
 
 Therefore, it has not been useful and necessary to develop and set up closed systems. Against the background of this networking idea, but also for security and stability reasons, we will develop a public (preferably federated) interface for the exchange of data between WECHANGE platforms and other platforms from the change spectrum with which we already cooperate (such as eg www.kartevonmorgen.org). The Github project was just the first step in building an open source developer community. We look forward to taking further steps with you or other interested developers, should that be in your interest.
 
@@ -55,7 +55,7 @@ Exactly. Even though we would like to, unfortunately there is no open source com
 
 <a id="get-in-contact"></a>
 ## WECHANGE seems to be a company, do I have to contact if I want to use the software?
-Of course you do not have to contact us for any project. This is an offer that can be performed on request. We assume that most people are grateful to receive a portal that we manage reliably. At the same time, this service is an important building block for the economic operation of our cooperative. We are happy to go new or different ways with you (currently, for example, tailwind from the GLS Bank indicates) and look forward to working together.
+Of course you do not have to contact us for any project. This is an offer that can be performed on request. We assume that most people are grateful to receive a portal that we manage reliably. At the same time, this service is an important building block for the economic operation of our cooperative. We are happy to go new or different ways with you and look forward to working together.
 
 <a id="open-source"></a>
 ## Are you really open source? A lot of documentation and manuals seem to be missing.
