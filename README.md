@@ -33,7 +33,7 @@ Michael (CEO), Sascha and Simon (Technology)
   * [Why do you want to leave a cookie active for 30 days?](#cookie-duration)
 * Security
   * [Why don't you use common technologies such as HSTS (or any other safety precaution)?](#security-concerns)
-  * According to the law the police can copy data from your hoster (Hetzner) without informing you (WECHANGE). Therefor WECHANGE also won't be able to inform users about potential accusasions (or worse).](#accusations)
+  * [According to the law the police can copy data from your hoster (Hetzner) without informing you (WECHANGE). Therefor WECHANGE also won't be able to inform users about potential accusasions (or worse).](#accusations)
 * Features / Integrations
   * [Why did you decide for Rocket.Chat, which is not considered current in the area of privacy and group chats?](#rocket-chat)
   * [Is it possible to get privacy and security concepts? The FAQ states that the pentest in 2015 has confirmed good data protection. Also the details of the security concept would be interesting. How often do you make backups? How does the platform scale?](#privacy-security-concept)
