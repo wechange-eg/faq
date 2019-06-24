@@ -19,10 +19,24 @@ Michael (CEO), Sascha and Simon (Technology)
   * [Are you really open source? A lot of documentation and manuals seem to be missing.](#open-source)
   * [Where can I find more documentation?](#documentation)
   * [How can I get involved?](#get-involved)
-* Onboarding
-* Open Source Policy / License
-* Data protection / Privacy
+* Setup
+  * [Can I setup WECHANGE locally (for development) or on my own server?](#own-server)
+  * [Where do I find documentation about the production setup?](#prod-setup)
+* Data Protection / Privacy
+  * [Why do you use web statistics?](#web-statistics)
+  * [When do you delete the tracking data collected?](#delete-tracking-data)
+  * [When combining the two session cookies used (WECHANGE and Matomo), the data can still be assigned to people even after anonymisation.](#session-cookies)
+  * [When a user is being deleted, the contributions don't get erased but only anonymized. This is not enough, since according to GDPR there's a right for complete cancellation. The user name could also appear within contributions (e.g. posts).](#delete-anonymization)
+  * [For contact form and email communication you save message and complete sender data. Any information added by an e-mail program need not and should not be saved. This is information that you do not need for further processing of an e-mail.](#email-data)
+  * [Why do you use Mailjet for sending emails?](#mailjet)
+  * [Do you still use SSL somewhere?](#ssl)
+  * [Why do you want to leave a cookie active for 30 days?](#cookie-duration)
 * Security
+  * [Why don't you use common technologies such as HSTS (or any other safety precaution)?](#security-concerns)
+  * According to the law the police can copy data from your hoster (Hetzner) without informing you (WECHANGE). Therefor WECHANGE also won't be able to inform users about potential accusasions (or worse).](#accusations)
+* Features / Integrations
+  * [Why did you decide for Rocket.Chat, which is not considered current in the area of privacy and group chats?](#rocket-chat)
+  * [Is it possible to get privacy and security concepts? The FAQ states that the pentest in 2015 has confirmed good data protection. Also the details of the security concept would be interesting. How often do you make backups? How does the platform scale?](#privacy-security-concept)
 
 # General / Onboarding
 <a id="developers"></a>
@@ -61,54 +75,68 @@ We're still working on our onboarding process. For now please:
 * Join our weekly meeting on Wed 2-3pm CEST at https://meet.jit.si/wechange
 
 # Setup
+<a id="own-server"></a>
 ## Can I setup WECHANGE locally (for development) or on my own server?
 The project is completely downloadable and executable. There are two options for this, which are also documented at https://github.com/wechange-eg/cosinnus-devops in the form of commands:
 
 * Using docker: The Docker setup was created during a hackathon in 2017 (it was working) and is currently not used by us for development, it definitely requires care. If you prefer to use that, we'll be happy to help you update and complete the setup. For the start, the manual setup is better.
 * Manually: As usual for Python projects, git clone / virtualenv / pip is used. The setup is unfortunately not quite trivial because of the dependencies to other open source projects - we are happy to bring the Docker image up to date together. In the last hackathon, the participants were able to set up the project locally with the help of the instructions. However, instructions are still missing for setting up the dependencies Etherpad, Ethercalc and (not required) ElasticSearch. We will supplement this with references to the installation instructions for these projects.
 
+<a id="prod-setup"></a>
 ## Where do I find documentation about the production setup?
 The most important difference is the DEBUG setting (in production "False"), which is also the basis for other settings. If you have any questions about the infrastructure required, please refer to COMMUNITY.
 
 # Data Protection / Privacy
+<a id="web-statistics"></a>
 ## Why do you use web statistics?
 [9] Despite being Open Source unfortunately we still cannot dispense with tracking web statistics. We use them to evaluate the success of funded projects, which still make part of our financial basis. However we use the Open Source Web Analytics Platform Matomo (Piwik) and we've taken all known measures within Matomo to protect privacy. For example, we mask the IP address (2 bytes, also used to prepare the visits), use the Do-Not-Track support and let users opt out of tracking. That's why e. g. for analysis of attacks (eg DDOS) the web statistics are not really helpful. Of course, the settings are site specific, i. you could change settings for your own portal or remove the tracking code completely.
 
+<a id="delete-tracking-data"></a>
 ## When do you delete the tracking data collected?
 The data is being deleted automatically by Matomo after 30 days.
 
-## When combining thw two session cookies used (WECHANGE and Matomo), the data can still be assigned to people even after anonymisation.
+<a id="session-cookies"></a>
+## When combining the two session cookies used (WECHANGE and Matomo), the data can still be assigned to people even after anonymisation.
 Good hint. Theoretically, the session ID of WECHANGE can be matched with the session ID of Matomo. Since the session ID in Piwik can not be read out so easily, we consider this as secondary. We are happy to work together to come up with a better solution and implement it.
 
+<a id="delete-anonymization"></a>
 ## When a user is being deleted, the contributions don't get erased but only anonymized. This is not enough, since according to GDPR there's a right for complete cancellation. The user name could also appear within contributions (e.g. posts). 
 Cancellation (german: „Löschen“) does not mean destroying (german: „Vernichten“). To our knowledge anonymizing is considered as cancellation within the meaning of the GDPR. If that is not enough, we can also build another solution together.
 
+<a id="email-data"></a>
 ## For contact form and email communication you save message and complete sender data. Any information added by an e-mail program need not and should not be saved. This is information that you do not need for further processing of an e-mail.
 This is common practice and from our point of view, no further concern. If you have a good alternative solution, we are open to it.
 
+<a id="mailjet"></a>
 ## Why do you use Mailjet for sending emails?
 We recently switched  to Mailjet, a specialized provider that works with EU-compliant privacy policies. We work with this provider to ensure the successful delivery of over 100,000 emails per month, which would not be possible at Hetzner. Please let us know, if you know about a more suitable provider.
 
+<a id="ssl"></a>
 ## Do you still use SSL somewhere?
 We are aware that SSL is no longer considered secure. To our knowledge, we now use only TLS.
 
+<a id="cookie-duration"></a>
 ## Why do you want to leave a cookie active for 30 days?
 We try to find the best balance between users concernced about privacy and users focussed on usability. There are a lot of very active users, who do not want to log in all the time.
 
 
 # Security
+<a id="security-concerns"></a>
 ## Why don't you use common technologies such as HSTS (or any other safety precaution)?
 We're giving our best to provide maximum and data security while maintaining the current usability of the platform. Please get in contact with us directly regarding any security concerns. 
 
+<a id="accusations"></a>
 ## According to the law the police can copy data from your hoster (Hetzner) without informing you (WECHANGE). Therefor WECHANGE also won't be able to inform users about potential accusasions (or worse).
 Good hint, we are aware of that. Above all, we are with Hetzner for financial reasons. But we are already in negotiation with https://www.hostsharing.net/ and will raise the issue there again. Whether this can be avoided is not yet clear to us.
 
 
 # Features / Integrations
+<a id="rocket-chat"></a>
 ## Why did you decide for Rocket.Chat, which is not considered current in the area of privacy and group chats?
 The Rocket.Chat integration is being implemented by platform "platform-n.org" with the WECHANGE eG. After much consideration (most recently between Matrix and Rocket.Chat), we chose Rocket.Chat for usability and product maturity. Although we're in love with the concept behind Matrix, initial tests with users have shown that we can not yet use Riot as client. Reasons were above all design, adjustment possibilities and risk of the data loss (key management is left to the user).
 
 E2E encryption is possible with both. Fortunately, both Matrix and Riot seem to be evolving faster and faster, and we can imagine switching back in the future or even running individual platforms with a different client. The integration currently happends via iframe and webhooks.
 
+<a id="privacy-security-concept"></a>
 ## Is it possible to get privacy and security concepts? The FAQ states that the pentest in 2015 has confirmed good data protection. Also the details of the security concept would be interesting. How often do you make backups? How does the platform scale?
 The data protection report of the pen test by german TÜV is no longer up to date. Another pen test would be useful in the meantime, but unfortunately we didn't manage to finance it yet. We have implemented all the necessary data protection measures within the framework of the GDPR, but we have so far largely lacked such a security concept. Therefore, it is one of our declared TOP goals for 2019 to create such a security concept with experts. In the meanwhile, please get in contact with us directly if you have questions or you are an expert.
