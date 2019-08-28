@@ -37,6 +37,7 @@ Michael (CEO), Sascha and Simon (Technology)
 * Features / Integrations
   * [Why did you decide for Rocket.Chat, which is not considered current in the area of privacy and group chats?](#rocket-chat)
   * [Is it possible to get privacy and security concepts? The FAQ states that the pentest in 2015 has confirmed good data protection. Also the details of the security concept would be interesting. How often do you make backups? How does the platform scale?](#privacy-security-concept)
+  * [Do you use encryption for data (e. g. E2E for messages and documents)?](#encryption)
 
 # General / Onboarding
 <a id="developers"></a>
@@ -140,3 +141,9 @@ E2E encryption is possible with both. Fortunately, both Matrix and Riot seem to 
 <a id="privacy-security-concept"></a>
 ## Is it possible to get privacy and security concepts? The FAQ states that the pentest in 2015 has confirmed good data protection. Also the details of the security concept would be interesting. How often do you make backups? How does the platform scale?
 The data protection report of the pen test by german TÜV is no longer up to date. Another pen test would be useful in the meantime, but unfortunately we didn't manage to finance it yet. We have implemented all the necessary data protection measures within the framework of the GDPR, but we have so far largely lacked such a security concept. Therefore, it is one of our declared TOP goals for 2019 to create such a security concept with experts. In the meanwhile, please get in contact with us directly if you have questions or you are an expert.
+
+<a id="encryption"></a>
+## Do you use encryption for data (e. g. E2E for messages and documents)?
+1. hard disk encryption: We are not planning to do this because the cost/benefit ratio does not suit us. Hard disk encryption would have a significant negative impact on the performance of our platform. In addition, an attacker would still have unencrypted access to all data in the running state. This would only protect the data against theft at our hosting provider. We consider this to be quite unlikely and at least negligible for the time being.
+
+2 End-to-end encryption (E2E): Here we are currently still faced with the challenge of a practicable solution. The keys must also not be stored on our servers, as a potential attacker would otherwise very easily gain unencrypted access to the data. On the other hand, we do not trust all our users to have independent key management. On the one hand, we have technically savvy users who are aware that they have to accept such circumstances for maximum data protection. On the other hand, we also have users who are less technically savvy or rarely use WECHANGE. For the latter group, there is a great risk that if they lose their key, they will lose access to all their previous data at WECHANGE. Messaging projects such as Matrix/Riot and Signal are doing very helpful pioneering work here, from which we want to learn. We are currently integrating Rocket.Chat (integration planned for end 2019) for direct and group messages, a service that for the first time enables E2E encryption at WECHANGE.
