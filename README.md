@@ -22,6 +22,7 @@ Michael (CEO), Sascha and Simon (Technology)
 * Setup
   * [Can I setup WECHANGE locally (for development) or on my own server?](#own-server)
   * [Where do I find documentation about the production setup?](#prod-setup)
+  * [How can I integrate WECHANGE with Wordpress?](#wordpress)
 * Data Protection / Privacy
   * [Why do you use web statistics?](#web-statistics)
   * [When do you delete the tracking data collected?](#delete-tracking-data)
@@ -86,6 +87,15 @@ The project is completely downloadable and executable. There are two options for
 <a id="prod-setup"></a>
 ## Where do I find documentation about the production setup?
 The most important difference is the DEBUG setting (in production "False"), which is also the basis for other settings. If you have any questions about the infrastructure required, please refer to COMMUNITY.
+
+<a id="wordpress"></a>
+## How can I integrate WECHANGE with Wordpress?
+WECHANGE works very well with Wordpress CMS. Usually the homepage and all informational pages are powered by Wordpress. Therefor we recommend to run Wordpress in a subdirectory (e.g. wechange.de/cms). We usually use the Divi theme but of course you're free to choose.
+
+In order to integrate WECHANGE data into Wordpress pages, you can
+* install our projects shortcode plugin at https://git.sinnwerkstatt.com/wechange/wordpress-plugin-projects,
+* reuse and adapt our code snippets at https://gist.github.com/simonline/f3ded7504701ce0594992184b6729246
+* make use of our API directly within your Javascript code or custom Wordpress plugin.
 
 # Data Protection / Privacy
 <a id="web-statistics"></a>
