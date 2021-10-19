@@ -2,7 +2,6 @@ This document contains Frequently Asked Questions regarding the technical stack 
 
 If you can't find an answer to your question you can:
 * Join our Discord chat at https://discord.gg/pX2TJMM
-* Join our weekly meeting on Wed 2-3pm CEST at https://meet.jit.si/wechange
 * Create an issue within this repo
 * Create a pull request for your question/answer within this repo
 
@@ -81,7 +80,7 @@ We're still working on our onboarding process. For now please:
 ## Can I setup WECHANGE locally (for development) or on my own server?
 The project is completely downloadable and executable. There are two options for this, which are also documented at https://github.com/wechange-eg/cosinnus-devops in the form of commands:
 
-* Using docker: The Docker setup was created during a hackathon in 2017 (it was working) and is currently not used by us for development, it definitely requires care. If you prefer to use that, we'll be happy to help you update and complete the setup. For the start, the manual setup is better.
+* Using docker: The Docker setup was created during a hackathon in 2017 (it was working) and is currently not used by us for development, it definitely requires care. If you prefer to use that, unfortunately we currently cannot offer any support. But you can try to find help from other developers in our community using the discord channel. For the start, the manual setup is better.
 * Manually: As usual for Python projects, git clone / virtualenv / pip is used. The setup is unfortunately not quite trivial because of the dependencies to other open source projects - we are happy to bring the Docker image up to date together. In the last hackathon, the participants were able to set up the project locally with the help of the instructions. However, instructions are still missing for setting up the dependencies Etherpad, Ethercalc and (not required) ElasticSearch. We will supplement this with references to the installation instructions for these projects.
 
 <a id="prod-setup"></a>
