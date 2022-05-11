@@ -92,9 +92,9 @@ The most important difference is the DEBUG setting (in production "False"), whic
 WECHANGE works very well with Wordpress CMS. Usually the homepage and all informational pages are powered by Wordpress. Therefor we recommend to run Wordpress in a subdirectory (e.g. wechange.de/cms). We usually use the Divi theme but of course you're free to choose.
 
 In order to integrate WECHANGE data into Wordpress pages, you can
-* install our projects shortcode plugin at https://git.sinnwerkstatt.com/wechange/wordpress-plugin-projects,
+* install our projects shortcode plugin at https://github.com/wechange-eg/wordpress-plugin,
 * reuse and adapt our code snippets at https://gist.github.com/simonline/f3ded7504701ce0594992184b6729246
-* make use of our API directly within your Javascript code or custom Wordpress plugin.
+* make use of our API directly within your Javascript code or custom Wordpress plugin https://wechange.de/swagger/
 
 # Data Protection / Privacy
 <a id="web-statistics"></a>
